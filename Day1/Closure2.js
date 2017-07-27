@@ -48,3 +48,25 @@ operate(printeven)
 operate(printsmall)
 operate(printallnums)
 operate(printfirstodd)
+
+// Using for each
+
+var numbers = [1,2,3,4,5,6,30,56,84,23,100];
+numbers.forEach(function(num){
+	console.log(num);
+});
+
+console.log("Even nunms are ");
+numbers.forEach(function(num){
+  if(num%2 == 0)
+  console.log(num);
+})
+
+//Prnint Sum
+
+
+var total = numbers.reduce(function(sum=0, item){
+return sum+item
+})
+
+console.log(`Total is ${total}`);
